@@ -61,7 +61,7 @@ public:
         return tokens;
     }
 private:
-   [[nodiscard]] optional<char> peak(int ahead = 1) const {
+   [[nodiscard]] inline optional<char> peak(int ahead = 1) const {
         if(m_index + ahead>m_src.length())
         {
             return {};
@@ -71,7 +71,7 @@ private:
             return m_src.at(m_index);
         }
     }
-    char consume()
+   inline char consume()
     {
         return m_src.at(m_index++);
     }
